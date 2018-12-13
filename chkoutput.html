@@ -1,0 +1,725 @@
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.11/lodash.min.js"></script>
+
+<script>
+
+ var products= [
+    {
+      "id": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "id"
+        },
+        "value": 14
+      },
+      "depth_uom": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "depth_uom"
+        },
+        "value": null
+      },
+      "height_uom": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "height_uom"
+        },
+        "value": null
+      },
+      "width_uom": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "width_uom"
+        },
+        "value": null
+      },
+      "gross_weight_uom": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "gross_weight_uom"
+        },
+        "value": null
+      },
+      "net_weight_uom": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "net_weight_uom"
+        },
+        "value": null
+      },
+      "net_content_uom": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "net_content_uom"
+        },
+        "value": null
+      },
+      "label_description_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "label_description_en"
+        },
+        "value": {
+          "en": "test"
+        }
+      },
+      "description_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "description_en"
+        },
+        "value": {
+          "en": "test1 test2"
+        }
+      },
+      "brand_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "brand_en"
+        },
+        "value": {
+          "en": "test1"
+        }
+      },
+      "functional_name_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "functional_name_en"
+        },
+        "value": {
+          "en": "test2"
+        }
+      },
+      "image_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "image_en"
+        },
+        "value": {
+          "en": "/media/product_images/gs1go/gs1go-03/09504000235994/Screenshot_from_2018-11-09_12-47-42.png"
+        }
+      },
+      "gs1_cloud_state": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "gs1_cloud_state"
+        },
+        "value": "ACTIVE"
+      },
+      "products": [],
+      "gtin": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "gtin"
+        },
+        "value": "09504000235994"
+      },
+      "gs1_company_prefix": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "gs1_company_prefix"
+        },
+        "value": "950400023599"
+      },
+      "gln_of_information_provider": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "gln_of_information_provider"
+        },
+        "value": "9504000235994"
+      },
+      "category": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "category"
+        },
+        "value": "10001761"
+      },
+      "sku": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "sku"
+        },
+        "value": null
+      },
+      "additional_trade_item_id_type": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "additional_trade_item_id_type"
+        },
+        "value": "SUPPLIER_ASSIGNED"
+      },
+      "type_of_information": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "type_of_information"
+        },
+        "value": "PRODUCT_IMAGE"
+      },
+      "sub_brand": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "sub_brand"
+        },
+        "value": null
+      },
+      "variant": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "variant"
+        },
+        "value": null
+      },
+      "depth": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "depth"
+        },
+        "value": null
+      },
+      "width": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "width"
+        },
+        "value": null
+      },
+      "height": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "height"
+        },
+        "value": null
+      },
+      "net_content": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "net_content"
+        },
+        "value": null
+      },
+      "gross_weight": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "gross_weight"
+        },
+        "value": null
+      },
+      "net_weight": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "net_weight"
+        },
+        "value": null
+      },
+      "company": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "company"
+        },
+        "value": null
+      },
+      "bar_type": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "bar_type"
+        },
+        "value": "EAN13"
+      },
+      "point_of_sale": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "point_of_sale"
+        },
+        "value": null
+      },
+      "website_url": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "website_url"
+        },
+        "value": null
+      },
+      "is_bunit": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_bunit"
+        },
+        "value": true
+      },
+      "is_cunit": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_cunit"
+        },
+        "value": true
+      },
+      "is_vunit": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_vunit"
+        },
+        "value": false
+      },
+      "is_ounit": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_ounit"
+        },
+        "value": false
+      },
+      "is_dunit": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_dunit"
+        },
+        "value": false
+      },
+      "is_iunit": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_iunit"
+        },
+        "value": false
+      },
+      "start_availability": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "start_availability"
+        },
+        "value": "2018-11-29T06:50:07.939071Z"
+      },
+      "end_availability": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "end_availability"
+        },
+        "value": "2018-11-29T06:50:07.939145Z"
+      },
+      "last_change": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "last_change"
+        },
+        "value": "2018-11-29T06:50:07.939220Z"
+      },
+      "returnable": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "returnable"
+        },
+        "value": false
+      },
+      "is_price_on_pack": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "is_price_on_pack"
+        },
+        "value": false
+      },
+      "manufacturer_gln": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "manufacturer_gln"
+        },
+        "value": null
+      },
+      "manufacturer_name": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "manufacturer_name"
+        },
+        "value": null
+      },
+      "communication_channel_code": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "communication_channel_code"
+        },
+        "value": null
+      },
+      "communication_value": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "communication_value"
+        },
+        "value": null
+      },
+      "descriptive_size": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "descriptive_size"
+        },
+        "value": null
+      },
+      "size_code": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "size_code"
+        },
+        "value": null
+      },
+      "mark": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "mark"
+        },
+        "value": 0
+      },
+      "owner": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "owner"
+        },
+        "value": 62
+      },
+      "company_organisation": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "company_organisation"
+        },
+        "value": 8
+      },
+      "member_organisation": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "member_organisation"
+        },
+        "value": 7
+      },
+      "package_level": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "package_level"
+        },
+        "value": 70
+      },
+      "package_type": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "package_type"
+        },
+        "value": 19
+      },
+      "country_of_origin": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "country_of_origin"
+        },
+        "value": 21
+      },
+      "target_market": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "target_market"
+        },
+        "value": 21
+      },
+      "language": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "language"
+        },
+        "value": 122
+      }
+    }
+  ];
+
+
+/*
+  "label_description_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "label_description_en"
+        },
+        "value": {
+          "en": "test"
+        }
+      },
+      "description_i18n": {
+        "ui_mandatory": false,
+        "ui_read_only": false,
+        "ui_enabled": false,
+        "ui_label_i18n": "",
+        "definition": "",
+        "label": {
+          "en": "description_en"
+        },
+        "value": {
+          "en": "test1 test2"
+        }
+      }   */
+
+
+  function transformProduct(product) {
+                return Object.keys(product).reduce((res, key) => {
+                    if (product[key].value !== undefined) {
+                        if (_.endsWith(key, '_i18n')) {
+                            res[key] = product[key].value && product[key].value[Object.keys(product[key].value)[0]];
+                            //console.log("T: ", Object.keys(product[key].value)[0]);
+                        } else {
+                            res[key] = product[key].value
+                        }
+                        return res
+                    } else {
+                        res[key] = product[key]
+                        return res
+                    }
+
+                }, {})
+            }
+
+  
+  var items = products.map((obj) => {
+                            const product = transformProduct(obj);
+                            if (product.products && product.products.length > 0) {
+                                product.products = product.products.map((sub) => {
+                                    const subProduct = this.transformProduct(sub.sub_product)
+                                    subProduct.quantity = sub.quantity
+                                    return subProduct
+                                })
+                            }
+                            product.showSubProduct = false
+                            return product
+
+                        })
+
+   // console.log(items);
+   var terrrr = "test 1" && "";
+console.log(terrrr);
+</script>
